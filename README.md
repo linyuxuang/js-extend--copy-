@@ -1,7 +1,7 @@
 # js-extend--copy-
 js 模拟类与子的继承复制
 
-
+                显示混入
                   var Vehicle={
                     sefg:3,
                     ignition:function(){
