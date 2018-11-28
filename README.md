@@ -1,5 +1,5 @@
 # js-extend--copy-
-js 模拟类与子的继承复制
+js 模拟类 父与子的继承复制
 
                 显示混入
                   var Vehicle={
