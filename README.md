@@ -51,3 +51,38 @@ js 模拟类与子的继承复制
         
         
         
+   寄生继承
+   
+    
+               function Vehicle(){
+                   this.engines=3;
+              }
+              Vehicle.prototype.ignition=function(){
+                  console.log("我是ignition方法")         
+              }
+             Vehicle.prototype.drive=function(){
+                this.ignition()
+                console.log("我是drive方法")
+                console.log(this) //Vehicle {engines: 3, drive: ƒ}
+             }
+              function Cat(){
+                  var cat=new Vehicle()
+                  var vuhDrive=cat.drive;
+                   cat.drive=function(){
+                    vuhDrive.call(this);
+                   }
+                  return cat;
+              }
+             var cat=new Cat();
+              cat.drive()   //我是ignition方法
+                            //我是drive方法
+
+
+ 
+
+
+
+
+
+
+
