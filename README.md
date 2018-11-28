@@ -36,4 +36,18 @@ js 模拟类与子的继承复制
                               //我是父类drive方法
                               //我是子类drive方法
 
-
+        上面这种继承模式不解？可看下面代码
+        
+        
+                 var Cat=mixin(Vehicle,{
+                   bera:90,
+                   get:function(){
+                     this.drive() 
+                   }   
+               })
+            console.log(Cat) //{bera: 90, get: ƒ, sefg: 3, ignition: ƒ, drive: ƒ}
+            Cat.get() //我是父类的ignition方法
+                      //我是父类drive方法  
+        
+        
+        
