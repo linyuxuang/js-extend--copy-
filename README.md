@@ -81,6 +81,46 @@ js 模拟类 父与子的继承复制
  
 
 
+隐式混入
+
+
+                  
+        var som={
+           cun:90,
+           cool:function(){
+              console.log(this)  //{koo: 190, cool: ƒ}
+              this.name="张三";
+              this.count=this.count?this.count+2:1
+           }
+        }
+      // som.cool()
+       //console.log(som.name) //展示单
+       //console.log(som.cun); //90
+       //console.log(som.count)  //1
+
+          var go={
+             koo:190,
+             cool:function(){
+                som.cool.call(this)
+             }
+          }
+            go.cool()
+            console.log(go.name)    //张三 
+            console.log(go.count)  //1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
